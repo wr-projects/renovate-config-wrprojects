@@ -4,7 +4,6 @@
   "extends": [
     "config:base",
     ":label(💚renovate)",
-    ":prConcurrentLimit0",
     ":prHourlyLimit0",
     ":prNotPending",
     ":timezone(Europe/Paris)",
