@@ -25,7 +25,8 @@
     },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "addLabels": ["🔀automerge"]
     },
     {
       "matchDepTypes": ["optionalDependencies"],
