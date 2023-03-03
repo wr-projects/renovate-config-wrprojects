@@ -8,6 +8,14 @@
     ":timezone(Europe/Paris)",
     "schedule:nonOfficeHours"
   ],
+  "labels": ["📦deps"],
+  "baseBranches": [
+    "main",
+    "dev"
+  ],
+  "enabledManagers": [
+    "npm"
+  ],
   "rangeStrategy": "auto",
   "packageRules": [
     {
@@ -16,13 +24,12 @@
       "groupName": "GitHub Actions"
     },
     {
-      "matchDepTypes": [
-        "dependencies"
-      ],
-      "rangeStrategy": "pin",
-      "labels": [
-        "📌pindep"
-      ]
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["optionalDependencies"],
+      "addLabels": ["📦optional"]
     }
   ],
   "dependencyDashboard": false,
@@ -35,8 +42,9 @@
   "separateMajorMinor": true,
   "rebaseWhen": "behind-base-branch",
   "semanticCommits": "enabled",
-  "semanticCommitType": "⬆️upgrade",
-  "semanticCommitScope": "version",
+  "commitMessagePrefix": "⬆️",
+  "semanticCommitType": "upgrade",
+  "semanticCommitScope": "deps",
   "commitBody": "Signed-off-by: {{{gitAuthor}}}",
   "npm": {
     "enabled": true
