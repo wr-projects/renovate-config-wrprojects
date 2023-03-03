@@ -13,9 +13,6 @@
     "main",
     "dev"
   ],
-  "enabledManagers": [
-    "npm"
-  ],
   "rangeStrategy": "bump",
   "packageRules": [
     {
@@ -47,8 +44,5 @@
   "semanticCommitType": "upgrade",
   "semanticCommitScope": "deps",
   "commitBody": "Signed-off-by: {{{gitAuthor}}}",
-  "npm": {
-    "enabled": true
-  },
   "updateNotScheduled": true
 }
