@@ -16,7 +16,7 @@
   "enabledManagers": [
     "npm"
   ],
-  "rangeStrategy": "auto",
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "enabled": false,
